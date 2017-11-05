@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour {
+public class Player : MonoBehaviour {
 
     public float speed = 10f;
     public const float moveSpeed = 5.0f;
-    public float jumpSpeed = 10f;
+    public float jumpSpeed = 5f;
     private Rigidbody2D rigid;
 
     Vector3 movement;
-    bool isJumping = false;
+    bool isGround = false;
 
     private void Start()
     {
@@ -22,16 +22,31 @@ public class Move : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump"))
         {
-            isJumping = true;
+            Jumpcontrol();
         }
-        else isJumping = false;
     }
 
     private void FixedUpdate()
     {
-        Jumpcontrol();
+        
         MoveControl();
 
+    }
+
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Ground")
+        {
+            isGround = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Ground")
+        {
+            isGround = false;
+        }
     }
 
     void MoveControl()
@@ -43,9 +58,9 @@ public class Move : MonoBehaviour {
 
     void Jumpcontrol ()
     {
-        if (!isJumping) return;
+        if (!isGround) return;
 
-        else
+        else if(isGround)
         {
             rigid.velocity = Vector2.zero;
 
