@@ -101,14 +101,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jumpSpeed: 5
-  p1LeftButton: 0
-  p1RightButton: 0
-  p1JumpButton: 0
-  p1SkillButton: 0
-  p2LeftButton: 0
-  p2RightButton: 0
-  p2JumpButton: 0
-  p2SkillButton: 0
+  p1LeftButton: 97
+  p1RightButton: 100
+  p1JumpButton: 119
+  p1SkillButton: 304
+  p2LeftButton: 276
+  p2RightButton: 275
+  p2JumpButton: 273
+  p2SkillButton: 32
 --- !u!212 &212004767129047930
 SpriteRenderer:
   m_ObjectHideFlags: 1

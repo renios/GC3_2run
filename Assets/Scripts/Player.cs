@@ -12,6 +12,18 @@ public class Player : MonoBehaviour {
     Vector3 movement;
     bool isGround = false;
 
+    // player1 controller
+    public KeyCode p1LeftButton;
+    public KeyCode p1RightButton;
+    public KeyCode p1JumpButton;
+    public KeyCode p1SkillButton;
+
+    // player2 controller
+    public KeyCode p2LeftButton;
+    public KeyCode p2RightButton;
+    public KeyCode p2JumpButton;
+    public KeyCode p2SkillButton;
+
     private void Start()
     {
         rigid = gameObject.GetComponent<Rigidbody2D>();
@@ -19,18 +31,16 @@ public class Player : MonoBehaviour {
 
     private void Update()
     {
-
-        if (Input.GetButtonDown("Jump"))
+        if ((Input.GetKeyDown(p1JumpButton) && tag == "Player1") ||
+            (Input.GetKeyDown(p2JumpButton) && tag == "Player2"))
         {
             Jumpcontrol();
         }
     }
 
     private void FixedUpdate()
-    {
-        
+    {  
         MoveControl();
-
     }
 
     void OnCollisionStay2D(Collision2D col)
@@ -51,9 +61,21 @@ public class Player : MonoBehaviour {
 
     void MoveControl()
     {
-        float distanceX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
-        this.gameObject.transform.Translate(distanceX, 0, 0);
+        // float distanceX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
+        float distanceX = 0;
 
+        if ((Input.GetKey(p1LeftButton) && tag == "Player1") ||
+            (Input.GetKey(p2LeftButton) && tag == "Player2"))
+        {
+            distanceX = -1 * Time.deltaTime * moveSpeed;;
+        }
+        if ((Input.GetKey(p1RightButton) && tag == "Player1") ||
+            (Input.GetKey(p2RightButton) && tag == "Player2"))
+        {
+            distanceX = Time.deltaTime * moveSpeed;;
+        } 
+
+        this.gameObject.transform.Translate(distanceX, 0, 0);
     }
 
     void Jumpcontrol ()
@@ -67,8 +89,5 @@ public class Player : MonoBehaviour {
             Vector2 jumpVelocity = new Vector2(0, jumpSpeed);
             rigid.AddForce(jumpVelocity, ForceMode2D.Impulse);
         }
-        
-
     }
-
 }
