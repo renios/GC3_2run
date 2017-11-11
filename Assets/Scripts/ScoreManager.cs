@@ -28,12 +28,23 @@ public class ScoreManager : MonoBehaviour {
         {   // 점수를 표시할 UI를 찾습니다.
             m_scoreText = GameObject.FindGameObjectWithTag("Score").GetComponent<Text>();
         }
+
+        StartCoroutine(UpdateScore());
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    IEnumerator UpdateScore()
+    {
+        while (true)
+        {
+            addScore(1);
+            yield return new WaitForSeconds(1);
+        }
     }
 
     public void addScore(int score)
