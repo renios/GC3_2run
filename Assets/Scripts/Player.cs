@@ -13,16 +13,16 @@ public class Player : MonoBehaviour {
     bool isGround = false;
 
     // player1 controller
-    public KeyCode p1LeftButton;
-    public KeyCode p1RightButton;
-    public KeyCode p1JumpButton;
-    public KeyCode p1SkillButton;
+    KeyCode p1LeftButton = KeyCode.A;
+    KeyCode p1RightButton = KeyCode.D;
+    KeyCode p1JumpButton = KeyCode.W;
+    KeyCode p1SkillButton;
 
     // player2 controller
-    public KeyCode p2LeftButton;
-    public KeyCode p2RightButton;
-    public KeyCode p2JumpButton;
-    public KeyCode p2SkillButton;
+    KeyCode p2LeftButton = KeyCode.LeftArrow;
+    KeyCode p2RightButton = KeyCode.RightArrow;
+    KeyCode p2JumpButton = KeyCode.UpArrow;
+    KeyCode p2SkillButton;
 
     private void Start()
     {

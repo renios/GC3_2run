@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour {
+public class Move : MonoBehaviour
+{
 
     public float speed = 10f;
     public const float moveSpeed = 5.0f;
@@ -22,10 +23,10 @@ public class Move : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump"))
         {
-            
+
             Jumpcontrol();
         }
-       
+
     }
 
     private void FixedUpdate()
@@ -53,6 +54,6 @@ public class Move : MonoBehaviour {
         rigid.AddForce(jumpVelocity, ForceMode2D.Impulse);
     }
 
-    
+
 
 }
