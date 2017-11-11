@@ -22,9 +22,10 @@ public class Move : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump"))
         {
-            isJumping = true;
+            
+            Jumpcontrol();
         }
-        else isJumping = false;
+       
     }
 
     private void FixedUpdate()
@@ -41,19 +42,17 @@ public class Move : MonoBehaviour {
 
     }
 
-    void Jumpcontrol ()
+    void Jumpcontrol()
     {
         if (!isJumping) return;
 
-        else
-        {
-            rigid.velocity = Vector2.zero;
 
-            Vector2 jumpVelocity = new Vector2(0, jumpSpeed);
-            rigid.AddForce(jumpVelocity, ForceMode2D.Impulse);
-        }
-        
+        rigid.velocity = Vector2.zero;
 
+        Vector2 jumpVelocity = new Vector2(0, jumpSpeed);
+        rigid.AddForce(jumpVelocity, ForceMode2D.Impulse);
     }
+
+    
 
 }
