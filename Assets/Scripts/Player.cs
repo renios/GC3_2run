@@ -16,13 +16,13 @@ public class Player : MonoBehaviour {
     KeyCode p1LeftButton = KeyCode.A;
     KeyCode p1RightButton = KeyCode.D;
     KeyCode p1JumpButton = KeyCode.W;
-    KeyCode p1SkillButton;
+    KeyCode p1SkillButton = KeyCode.LeftShift;
 
     // player2 controller
     KeyCode p2LeftButton = KeyCode.LeftArrow;
     KeyCode p2RightButton = KeyCode.RightArrow;
     KeyCode p2JumpButton = KeyCode.UpArrow;
-    KeyCode p2SkillButton;
+    KeyCode p2SkillButton = KeyCode.Space;
 
     private void Start()
     {
