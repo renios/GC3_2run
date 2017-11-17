@@ -72,12 +72,12 @@ public class Player : MonoBehaviour {
         if ((Input.GetKey(p1LeftButton) && tag == "Player1") ||
             (Input.GetKey(p2LeftButton) && tag == "Player2"))
         {
-            distanceX = -1 * Time.deltaTime * moveSpeed;;
+            distanceX = -1 * Time.deltaTime * moveSpeed;
         }
         if ((Input.GetKey(p1RightButton) && tag == "Player1") ||
             (Input.GetKey(p2RightButton) && tag == "Player2"))
         {
-            distanceX = Time.deltaTime * moveSpeed;;
+            distanceX = 1.8f * Time.deltaTime * moveSpeed;
         } 
 
         this.gameObject.transform.Translate(distanceX, 0, 0);
@@ -120,6 +120,10 @@ public class Player : MonoBehaviour {
         if (playerHealth < 0)
             playerHealth = 0;
         hpText.text = "x " + playerHealth;
+
+        if ((playerHealth <= 0) && (!FindObjectOfType<TextManager>().isOver)) {
+            FindObjectOfType<TextManager>().PrintGameOverText();
+        }
     }
 
     IEnumerator Immune () {

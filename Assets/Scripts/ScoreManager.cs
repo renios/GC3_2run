@@ -40,7 +40,8 @@ public class ScoreManager : MonoBehaviour {
 
     IEnumerator UpdateScore()
     {
-        while (true)
+        TextManager tm = FindObjectOfType<TextManager>();
+        while (!tm.isOver)
         {
             addScore(1);
             yield return new WaitForSeconds(1);
