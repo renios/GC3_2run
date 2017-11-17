@@ -1,8 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
+
+    public Text hpText; 
+    public int playerHealth = 5;
+    bool immuned = false;
 
     public float speed = 10f;
     public const float moveSpeed = 5.0f;
@@ -87,7 +92,44 @@ public class Player : MonoBehaviour {
             rigid.velocity = Vector2.zero;
 
             Vector2 jumpVelocity = new Vector2(0, jumpSpeed);
+            if (rigid.gravityScale < 0) {
+                jumpVelocity *= -1;
+            }
             rigid.AddForce(jumpVelocity, ForceMode2D.Impulse);
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "big_Monster") {
+            Damaged(5);
+        }
+
+        if (immuned) {
+            return;
+        }
+
+        if (other.gameObject.tag == "monster") {
+            Damaged(1);
+        }
+    }
+
+    void Damaged(int damage) {
+        StartCoroutine(Immune());
+        playerHealth -= damage;
+        if (playerHealth < 0)
+            playerHealth = 0;
+        hpText.text = "x " + playerHealth;
+    }
+
+    IEnumerator Immune () {
+        immuned = true;
+        for (int i = 0; i < 4; i++) {
+            GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.3f);
+            yield return new WaitForSeconds(0.125f);
+            GetComponent<SpriteRenderer>().color = new Color(1,1,1,1);
+            yield return new WaitForSeconds(0.125f);
+        }
+        immuned = false;
     }
 }

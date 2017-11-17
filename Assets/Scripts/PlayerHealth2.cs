@@ -17,7 +17,7 @@ public class PlayerHealth2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hptext02.text = "Health : " + player2Health;
+        hptext02.text = "x " + player2Health;
 
     }
 

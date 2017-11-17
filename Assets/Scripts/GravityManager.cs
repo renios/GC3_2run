@@ -18,6 +18,9 @@ public class GravityManager : MonoBehaviour {
         {
             player1Rigidbody.gravityScale = player1Rigidbody.gravityScale * -1;
             player2Rigidbody.gravityScale = player2Rigidbody.gravityScale * -1;
+
+            player1Rigidbody.transform.rotation *= Quaternion.Euler(180,0,0);
+            player2Rigidbody.transform.rotation *= Quaternion.Euler(180,0,0);
         }
 	}
 }
