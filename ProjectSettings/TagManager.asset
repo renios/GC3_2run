@@ -10,8 +10,12 @@ TagManager:
   - Score
   - monster
   - big_Monster
+<<<<<<< HEAD
   - Obstacle
   - Heart
+=======
+  - spikes
+>>>>>>> cb64176298005b50d24b4fb3f7dcc8a79e8ea7a9
   layers:
   - Default
   - TransparentFX

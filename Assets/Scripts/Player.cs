@@ -112,6 +112,10 @@ public class Player : MonoBehaviour {
         if (other.gameObject.tag == "monster") {
             Damaged(1);
         }
+        if (other.gameObject.tag == "spikes")
+        {
+            Damaged(1);
+        }
     }
 
     void Damaged(int damage) {

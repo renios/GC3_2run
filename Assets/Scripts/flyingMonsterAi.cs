@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class monsterAi : MonoBehaviour {
+public class flyingMonsterAi : MonoBehaviour {
 
     public float mon_movePower = 1f;
     Vector3 movement;
@@ -20,7 +20,7 @@ public class monsterAi : MonoBehaviour {
         }
         else if (FindObjectOfType<TimeManager>().timeSkillCheck == 0)
         {
-            movementFlag = Random.Range(2, 3);
+            movementFlag = Random.Range(1, 3);
 
         }
     }
@@ -38,12 +38,12 @@ public class monsterAi : MonoBehaviour {
 
         if (movementFlag == 1)
         {
-            moveVelocity = Vector3.left;
+            moveVelocity = Vector3.up;
             //transform.localScale = new Vector3(1, 1, 1);
         }
         else if (movementFlag == 2)
         {
-            moveVelocity = Vector3.right;
+            moveVelocity = Vector3.down;
             //transform.localScale = new Vector3(-1, 1, 1);
         }
         transform.position += moveVelocity * mon_movePower * Time.deltaTime;
