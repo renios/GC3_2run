@@ -25,5 +25,6 @@ public class PlayerHealth2 : MonoBehaviour
     {
         if (other.gameObject.tag == "monster") player2Health = player2Health - 1;
         if (other.gameObject.tag == "big_Monster") player2Health = 0;
+        if (other.gameObject.tag == "spikes") player2Health = player2Health - 1;
     }
 }
