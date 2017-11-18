@@ -10,6 +10,8 @@ TagManager:
   - Score
   - monster
   - big_Monster
+  - Obstacle
+  - Heart
   layers:
   - Default
   - TransparentFX

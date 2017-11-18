@@ -23,7 +23,11 @@ public class PlayerHealth2 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "monster") player2Health = player2Health - 1;
-        if (other.gameObject.tag == "big_Monster") player2Health = 0;
+        if (other.gameObject.tag == "monster")
+            player2Health = player2Health - 1;
+        if (other.gameObject.tag == "big_Monster")
+            player2Health = 0;
+        if (other.gameObject.tag == "Heart")
+            player2Health = player2Health++;
     }
 }
