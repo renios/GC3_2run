@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - monster
+  - Score
+  - big_Monster
+  - Player2
+  - Player1
+  - spikes
+  - Heart
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -14,7 +22,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 

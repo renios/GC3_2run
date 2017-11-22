@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class Player : MonoBehaviour {
 
@@ -41,6 +42,15 @@ public class Player : MonoBehaviour {
         {
             Jumpcontrol();
         }
+
+        if (Input.GetKeyDown(p1SkillButton) && tag == "Player1")
+        {
+            Player1Skill();
+        } 
+        if (Input.GetKeyDown(p2SkillButton) && tag == "Player2" && !isPlayer2SkillActive)
+        {
+            StartCoroutine(Player2Skill());
+        } 
     }
 
     private void FixedUpdate()
@@ -64,6 +74,48 @@ public class Player : MonoBehaviour {
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "Coin") {
+            FindObjectOfType<ScoreManager>().addScore(10);
+            Destroy(other.gameObject);
+        }
+    }
+
+    void Player1Skill() {
+        List<Player> players = FindObjectsOfType<Player>().ToList();  
+        foreach (var player in players) {
+            player.GetComponent<Rigidbody2D>().gravityScale *= -1;
+            player.transform.rotation *= Quaternion.Euler(180,0,0);
+        }
+    }
+
+    bool isPlayer2SkillActive = false;
+
+    IEnumerator Player2Skill() {
+        isPlayer2SkillActive = true;
+
+        List<GameObject> monsters = GameObject.FindGameObjectsWithTag("monster").ToList();  
+        foreach (var monster in monsters) {
+            if (monster.GetComponent<Rigidbody2D>() != null) {
+               monster.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+               monster.GetComponent<SpriteRenderer>().color = Color.gray;
+            }
+        }
+
+        yield return new WaitForSeconds(2);
+
+        foreach (var monster in monsters) {
+            if (monster.GetComponent<Rigidbody2D>() != null) {
+                monster.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                monster.GetComponent<SpriteRenderer>().color = Color.white;
+            }
+        }
+
+        yield return new WaitForSeconds(2);
+
+        isPlayer2SkillActive = false;
+    }
+
     void MoveControl()
     {
         // float distanceX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
@@ -77,7 +129,7 @@ public class Player : MonoBehaviour {
         if ((Input.GetKey(p1RightButton) && tag == "Player1") ||
             (Input.GetKey(p2RightButton) && tag == "Player2"))
         {
-            distanceX = 1.8f * Time.deltaTime * moveSpeed;
+            distanceX = 1.5f * Time.deltaTime * moveSpeed;
         } 
 
         this.gameObject.transform.Translate(distanceX, 0, 0);
