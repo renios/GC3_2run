@@ -1225,7 +1225,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1245,7 +1245,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1265,7 +1265,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1285,7 +1285,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1305,7 +1305,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1325,7 +1325,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1345,7 +1345,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1365,7 +1365,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1385,7 +1385,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1405,7 +1405,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1425,7 +1425,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1445,7 +1445,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1465,7 +1465,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1485,7 +1485,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1505,7 +1505,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1525,7 +1525,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1545,7 +1545,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2362,7 +2362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114040129894938882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2374,7 +2374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114043423862475502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2386,7 +2386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114076792852035390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2398,7 +2398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114111028744125686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2410,7 +2410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114166385583296570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2422,7 +2422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114197584251725158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2434,7 +2434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114258557118357296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2446,7 +2446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114320205302353342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2458,7 +2458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114334771650593510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2470,7 +2470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114369006090441622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2482,7 +2482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114615684393729028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2494,7 +2494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114669783068758768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2506,7 +2506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114702218024256102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2518,7 +2518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114831669327086402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2530,7 +2530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114926472053490570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2542,7 +2542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114927355728162262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2554,7 +2554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dbfd9870a1549e8b30cdc55225732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 6
+  jumpSpeed: 10
 --- !u!114 &114981814135209168
 MonoBehaviour:
   m_ObjectHideFlags: 1

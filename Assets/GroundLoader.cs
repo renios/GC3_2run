@@ -21,6 +21,8 @@ public class GroundLoader : MonoBehaviour {
 		if (Mathf.Max(player1.position.x, player2.position.x) > playerSector * 20 - 5) {
 			playerSector += 1;
 
+			if (playerSector < 4) return;
+
 			int groundIndex;
 			if (Random.Range(0, 4) == 0) {
 				groundIndex = 1;
