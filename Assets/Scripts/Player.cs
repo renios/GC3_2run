@@ -76,7 +76,8 @@ public class Player : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Coin") {
-            FindObjectOfType<ScoreManager>().AddScore(10);
+            if (!FindObjectsOfType<Player>().ToList().Any(player => player.playerHealth <= 0)) 
+                FindObjectOfType<ScoreManager>().AddScore(10);
             Destroy(other.gameObject);
         }
 
