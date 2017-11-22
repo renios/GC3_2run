@@ -9,6 +9,7 @@ public class TextManager : MonoBehaviour {
 
 	public Sprite gameStart;
 	public Sprite gameOver;
+	public Text restartText;
 
 	public bool isOver;
 
@@ -35,8 +36,12 @@ public class TextManager : MonoBehaviour {
 		if (isOver) return;
 
 		isOver = true;
+		
+		if (FindObjectOfType<ScoreManager>().m_score > BestScoreManager.bestScore) 
+			BestScoreManager.bestScore = FindObjectOfType<ScoreManager>().m_score;
 
 		GetComponent<Image>().sprite = gameOver;
 		transform.DOScale(new Vector3(1.5f,1.5f,1), 1f);
+		restartText.enabled = true;
 	}
 }

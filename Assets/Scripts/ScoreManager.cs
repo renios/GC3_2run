@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
     public static ScoreManager instance = null;
-    public Text m_scoreText = null;
-    private int m_score = 0;
+    public Text m_scoreText;
+    public int m_score = 0;
+
+    public Text bestScoreText;
 
     void Awake ()
     {
@@ -24,10 +26,7 @@ public class ScoreManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if (m_scoreText == null)
-        {   // 점수를 표시할 UI를 찾습니다.
-            m_scoreText = GameObject.FindGameObjectWithTag("Score").GetComponent<Text>();
-        }
+        bestScoreText.text = "Best Score : " + BestScoreManager.bestScore;
 
         StartCoroutine(UpdateScore());
     }
@@ -43,12 +42,12 @@ public class ScoreManager : MonoBehaviour {
         TextManager tm = FindObjectOfType<TextManager>();
         while (!tm.isOver)
         {
-            addScore(1);
+            AddScore(1);
             yield return new WaitForSeconds(1);
         }
     }
 
-    public void addScore(int score)
+    public void AddScore(int score)
     {
         m_score = m_score + score;          // 점수를 더합니다.
         m_scoreText.text = m_score.ToString();   // 점수를 표시해 줍니다.

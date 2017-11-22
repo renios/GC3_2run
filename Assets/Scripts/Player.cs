@@ -76,7 +76,16 @@ public class Player : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Coin") {
-            FindObjectOfType<ScoreManager>().addScore(10);
+            FindObjectOfType<ScoreManager>().AddScore(10);
+            Destroy(other.gameObject);
+        }
+
+        if (immuned) {
+            return;
+        }
+
+        if (other.tag == "monster") {
+            Damaged(1);
             Destroy(other.gameObject);
         }
     }
@@ -102,16 +111,28 @@ public class Player : MonoBehaviour {
             }
         }
 
-        yield return new WaitForSeconds(2);
+        List<GameObject> gears = GameObject.FindGameObjectsWithTag("Gear").ToList();
+        foreach (var gear in gears) {
+            gear.GetComponent<Gear>().speed = 0;
+            gear.GetComponent<SpriteRenderer>().color = Color.gray;
+        }
+
+        yield return new WaitForSeconds(3);
 
         foreach (var monster in monsters) {
+            if (monster == null) continue;
             if (monster.GetComponent<Rigidbody2D>() != null) {
                 monster.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 monster.GetComponent<SpriteRenderer>().color = Color.white;
             }
         }
 
-        yield return new WaitForSeconds(2);
+        foreach (var gear in gears) {
+            gear.GetComponent<Gear>().speed = gear.GetComponent<Gear>().originspeed;
+            gear.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+
+        yield return new WaitForSeconds(1);
 
         isPlayer2SkillActive = false;
     }
