@@ -14,6 +14,7 @@ public class TitleImage : MonoBehaviour {
 	void Update () {
 		if (Input.anyKeyDown) {
 			GetComponent<Image>().enabled = false;
+			FindObjectOfType<AudioSource>().Play();
 		}
 	}
 }

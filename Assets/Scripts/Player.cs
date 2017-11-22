@@ -6,6 +6,13 @@ using System.Linq;
 
 public class Player : MonoBehaviour {
 
+    public AudioSource audio;
+    public AudioClip endSound;
+    public AudioClip jumpSound;
+    public AudioClip p1SkillSound;
+    public AudioClip p2SkillSound;
+    public AudioClip coinSound;
+
     public Text hpText; 
     public int playerHealth = 5;
     bool immuned = false;
@@ -45,10 +52,12 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(p1SkillButton) && tag == "Player1")
         {
+            audio.PlayOneShot(p1SkillSound);
             Player1Skill();
         } 
         if (Input.GetKeyDown(p2SkillButton) && tag == "Player2" && !isPlayer2SkillActive)
         {
+            audio.PlayOneShot(p2SkillSound);
             StartCoroutine(Player2Skill());
         } 
     }
@@ -76,8 +85,10 @@ public class Player : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Coin") {
-            if (!FindObjectsOfType<Player>().ToList().Any(player => player.playerHealth <= 0)) 
+            if (!FindObjectsOfType<Player>().ToList().Any(player => player.playerHealth <= 0)) {
                 FindObjectOfType<ScoreManager>().AddScore(10);
+                audio.PlayOneShot(coinSound);
+            }
             Destroy(other.gameObject);
         }
 
@@ -161,16 +172,15 @@ public class Player : MonoBehaviour {
     {
         if (!isGround) return;
 
-        else if(isGround)
-        {
-            rigid.velocity = Vector2.zero;
+        audio.PlayOneShot(jumpSound);
 
-            Vector2 jumpVelocity = new Vector2(0, jumpSpeed);
-            if (rigid.gravityScale < 0) {
-                jumpVelocity *= -1;
-            }
-            rigid.AddForce(jumpVelocity, ForceMode2D.Impulse);
+        rigid.velocity = Vector2.zero;
+
+        Vector2 jumpVelocity = new Vector2(0, jumpSpeed);
+        if (rigid.gravityScale < 0) {
+            jumpVelocity *= -1;
         }
+        rigid.AddForce(jumpVelocity, ForceMode2D.Impulse);
     }
 
     void OnCollisionEnter2D(Collision2D other)

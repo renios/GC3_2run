@@ -14,7 +14,11 @@ public class StartButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetKeyDown(KeyCode.Return)) {
+			if (!FindObjectOfType<TitleImage>().GetComponent<Image>().enabled) {
+				ChangeGameScene();
+			}
+		}
 	}
 
     public void ChangeGameScene()
