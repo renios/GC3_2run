@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraScroller : MonoBehaviour {
 	
@@ -17,5 +18,9 @@ public class CameraScroller : MonoBehaviour {
 		transform.position += Vector3.right * scrollSpeed * Time.deltaTime * (1 + distanceCoef);
 
 		distanceCoef = (Camera.main.transform.position.x / 100) / 10f;
+
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			SceneManager.LoadScene("Title");
+		}
 	}
 }

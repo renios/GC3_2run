@@ -7,6 +7,8 @@ using DG.Tweening;
 
 public class StartButton : MonoBehaviour {
 
+	public GameObject credit;
+
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(ChangeSize());
@@ -15,7 +17,12 @@ public class StartButton : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Return)) {
-			if (!FindObjectOfType<TitleImage>().GetComponent<Image>().enabled) {
+			if (FindObjectOfType<TitleImage>() == null) return;
+			if (FindObjectOfType<TitleImage>().GetComponent<Image>() == null) return;
+			if (credit == null) return;
+
+			if ((!FindObjectOfType<TitleImage>().GetComponent<Image>().enabled) &&
+				(!credit.activeInHierarchy)) {
 				ChangeGameScene();
 			}
 		}
@@ -35,5 +42,9 @@ public class StartButton : MonoBehaviour {
 			tween = GetComponent<RectTransform>().DOScale(scale * 0.9f, 1f);
 			yield return tween.WaitForCompletion();
 		}
+	}
+
+	public void PopupCredits() {
+		credit.SetActive(true);
 	}
 }
