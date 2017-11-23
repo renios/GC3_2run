@@ -1491,6 +1491,14 @@ Prefab:
       value: 
       objectReference: {fileID: 12800000, guid: 63aac1e646c6c41e1a4df229a2f39eea,
         type: 3}
+    - target: {fileID: 1217914545815506, guid: fafc0e5148028408a9b3fc09630ae9d1, type: 2}
+      propertyPath: m_Name
+      value: HealthText_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494512616864996, guid: fafc0e5148028408a9b3fc09630ae9d1, type: 2}
+      propertyPath: m_Name
+      value: HealthText_01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fafc0e5148028408a9b3fc09630ae9d1, type: 2}
   m_IsPrefabParent: 0
@@ -2320,7 +2328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -699, y: -42.00006}
+  m_AnchoredPosition: {x: -699, y: -42}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &635717391
@@ -4868,7 +4876,7 @@ MonoBehaviour:
   p1SkillSound: {fileID: 8300000, guid: c8cd4fe90753c4ce2bac356e959d3419, type: 3}
   p2SkillSound: {fileID: 8300000, guid: f06cf70d7dec94a2fb55b22be0d9f2da, type: 3}
   coinSound: {fileID: 8300000, guid: fe9a90097945d416e922e4d30358c325, type: 3}
-  hpText: {fileID: 1311467721}
+  hpText: {fileID: 1228452686}
   playerHealth: 5
   speed: 10
   jumpSpeed: 5
@@ -7264,7 +7272,7 @@ MonoBehaviour:
   p1SkillSound: {fileID: 8300000, guid: c8cd4fe90753c4ce2bac356e959d3419, type: 3}
   p2SkillSound: {fileID: 8300000, guid: f06cf70d7dec94a2fb55b22be0d9f2da, type: 3}
   coinSound: {fileID: 8300000, guid: fe9a90097945d416e922e4d30358c325, type: 3}
-  hpText: {fileID: 1228452686}
+  hpText: {fileID: 1311467721}
   playerHealth: 5
   speed: 10
   jumpSpeed: 5
